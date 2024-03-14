@@ -166,7 +166,7 @@ void PylonROS2CameraNode::initPublishers()
 
   msg_name = msg_prefix + "image_raw";
   this->img_raw_pub_ = image_transport::create_camera_publisher(this, msg_name);
-
+  
   // blaze related topics
   msg_name = msg_prefix + "blaze_cloud"; this->blaze_cloud_topic_name_ = msg_name;
   this->blaze_cloud_pub_ = this->create_publisher<sensor_msgs::msg::PointCloud2>(msg_name, 10);
